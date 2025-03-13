@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/bazzite:stable
+FROM quay.io/fedora/fedora-silverblue:latest
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
@@ -14,6 +14,7 @@ FROM ghcr.io/ublue-os/bazzite:stable
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
+COPY etc /etc
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
