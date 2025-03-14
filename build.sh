@@ -29,6 +29,5 @@ curl --retry 3 -o /etc/flatpak/remotes.d/flathub.flatpakrepo "https://dl.flathub
 
 # Add Solaar udev rules
 curl --retry 3 -o /etc/udev/rules.d/42-logitech-unify-permissions.rules "https://raw.githubusercontent.com/pwr-Solaar/Solaar/refs/heads/master/rules.d-uinput/42-logitech-unify-permissions.rules"
-udevadm control --reload-rules
 
 dconf update
