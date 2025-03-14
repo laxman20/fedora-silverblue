@@ -15,6 +15,7 @@ FROM quay.io/fedora/fedora-silverblue:latest
 
 COPY build.sh /tmp/build.sh
 COPY etc /etc
+COPY first-boot /usr/bin/first-boot
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \

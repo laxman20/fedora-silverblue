@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+flatpak remote-delete --force fedora
+
+flatpak install io.github.fabrialberio.pinapp \
+	net.nokyan.Resources \
+	org.gnome.Calculator \
+	org.gnome.Loupe \
+	org.gnome.NautilusPreviewer \
+	org.mozilla.firefox \
+	page.tesk.Refine
