@@ -2,10 +2,13 @@
 
 flatpak remote-delete --force fedora
 
-flatpak install io.github.fabrialberio.pinapp \
+flatpak install --noninteractive --assumeyes \
+	io.github.fabrialberio.pinapp \
 	net.nokyan.Resources \
 	org.gnome.Calculator \
 	org.gnome.Loupe \
 	org.gnome.NautilusPreviewer \
 	org.mozilla.firefox \
-	page.tesk.Refine
+	page.tesk.Refine \
+	com.github.tchx84.Flatseal \
+	io.github.zaedus.spider
