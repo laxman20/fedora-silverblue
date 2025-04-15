@@ -10,7 +10,10 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-# dnf5 install -y tmux 
+dnf5 install -y \
+	gnome-shell-extension-appindicator \
+	gnome-shell-extension-caffeine \
+	solaar-udev
 
 # Use a COPR Example:
 #
@@ -27,7 +30,3 @@ set -ouex pipefail
 mkdir -p /etc/flatpak/remotes.d
 curl --retry 3 -o /etc/flatpak/remotes.d/flathub.flatpakrepo "https://dl.flathub.org/repo/flathub.flatpakrepo"
 
-# Add Solaar udev rules
-curl --retry 3 -o /etc/udev/rules.d/42-logitech-unify-permissions.rules "https://raw.githubusercontent.com/pwr-Solaar/Solaar/refs/heads/master/rules.d-uinput/42-logitech-unify-permissions.rules"
-
-dconf update
