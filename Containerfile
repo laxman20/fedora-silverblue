@@ -16,6 +16,7 @@ FROM quay.io/fedora/fedora-silverblue:latest
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY etc /etc
+COPY cosign.pub /etc/pki/containers/laxman20-fedora-silverblue.pub
 COPY first-boot /usr/bin/first-boot
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
