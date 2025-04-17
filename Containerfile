@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora-silverblue:latest
+FROM quay.io/fedora/fedora-silverblue:42
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
