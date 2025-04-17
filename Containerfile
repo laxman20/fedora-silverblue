@@ -1,7 +1,7 @@
 FROM scratch as ctx
 COPY build_files /
 
-FROM quay.io/fedora/fedora-bootc:42
+FROM quay.io/fedora/fedora-silverblue:latest
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
@@ -24,8 +24,3 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh && \
     ostree container commit
-
-### LINTING
-## Verify final image and contents are correct.
-RUN bootc container lint
-    
